@@ -21,12 +21,12 @@ namespace KittuBookStore.Repository
         {
             return new List<BookModel>()
             {
-               new BookModel(){Id=1,Title="Mvc",Author="Kittu",Description="Description About Mvc Book" },
-               new BookModel(){Id=1,Title="AspMvc",Author="Pawan",Description="Description About AspMvc Book" },
-               new BookModel(){Id=1,Title="Core",Author="Ram",Description="Description About Core Book" },
-               new BookModel(){Id=1,Title="C#",Author="Sathish",Description="Description About C# Book" },
-               new BookModel(){Id=1,Title="Java",Author="Tej",Description="Description About Java Book" },
-               new BookModel(){Id=1,Title="JavaScript",Author="Sai",Description="Description About JavaScript" }
+               new BookModel(){Id=1,Title="Mvc",Author="Kittu",Description="Description About Mvc Book",Category="Design",Language="English",TotalPages=235},
+               new BookModel(){Id=2,Title="AspMvc",Author="Pawan",Description="Description About AspMvc Book",Category="FrameWork",Language="English",TotalPages=594},
+               new BookModel(){Id=3,Title="DOtNetCore",Author="Ram",Description="Description About Core Book" ,Category="FrameWork",Language="English",TotalPages=3827},
+               new BookModel(){Id=4,Title="C#",Author="Sathish",Description="Description About C# Book" ,Category="Programming",Language="English",TotalPages=357},
+               new BookModel(){Id=5,Title="Java",Author="Tej",Description="Description About Java Book",Category="Programming",Language="English",TotalPages=2281},
+               new BookModel(){Id=6,Title="JavaScript",Author="Sai",Description="Description About JavaScript" ,Category="Scripting",Language="English",TotalPages=1892}
 
             };
         }

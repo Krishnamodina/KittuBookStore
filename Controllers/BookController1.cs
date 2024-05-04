@@ -19,8 +19,9 @@ namespace KittuBookStore.Controllers
             return View(data);
 
         }
-        public BookModel GetBook(int id) { 
-           return _bookRepository.GetBookById(id);
+        public ViewResult GetBook(int id) { 
+           var data1=_bookRepository.GetBookById(id);
+            return View(data1);  
         }
         public List<BookModel> SearchBooks(string bookname,string author)
         {
