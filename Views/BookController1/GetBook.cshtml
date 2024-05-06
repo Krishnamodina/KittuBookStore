@@ -1,10 +1,9 @@
-﻿ @using KittuBookStore.Models;
+﻿@{
+    ViewData["Tittle"] = "Book Details"+Model.Title;
+}
  @model BookModel;
 
-@{ 
-   
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+
 
 <div class="container ">
     <h3 class="display-4">Book Details</h3>

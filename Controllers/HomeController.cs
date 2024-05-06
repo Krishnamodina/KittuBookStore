@@ -11,15 +11,16 @@ namespace KittuBookStore.Controllers
         {
             return View();
         }
-        public ViewResult AboutUs() { 
+        public ViewResult AboutUs()
+        { 
        
           return View();
 
         }
        public ViewResult Contact()
-        {
+       {
             return View();
-        }
+       }
 
     }
 }
