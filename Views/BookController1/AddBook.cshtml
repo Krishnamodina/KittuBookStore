@@ -1,0 +1,72 @@
+﻿@model BookModel
+@{
+    ViewData["Tittle"] = "AddBook";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h3 class="display-4">Add New Book</h3>
+    <hr />
+    @if(ViewBag.isSuccess)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Congratulations</strong>New Book is Added Successfully.<br />
+            Click<a asp-controller="BookController1" asp-action="GetBook" asp-route-id="@ViewBag.BookId">here</a>
+            to View More Details
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+
+   
+
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Title">
+
+            </label>
+            <input asp-for="Title" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Author">
+
+            </label>
+            <input asp-for="Author" class="form-control" />
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="Language">
+
+            </label>
+            <input asp-for="Language" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Category">
+
+            </label>
+            <input asp-for="Category" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Description">
+
+            </label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label asp-for="TotalPages">
+
+            </label>
+            <input asp-for="TotalPages" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add Book" class="btn btn-primary" />
+        </div>
+    </form>
+
+    <div>
+       <br />
+       <br />
+    </div>
+
+</div>

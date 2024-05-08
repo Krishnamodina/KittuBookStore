@@ -1,18 +1,77 @@
-﻿   using KittuBookStore.Models;
+﻿using KittuBookStore.Data;
+using KittuBookStore.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace KittuBookStore.Repository
 {
     public class BookRepository
     {
-        public List<BookModel> GetAllBooks()
+        private readonly BookStoreContext? _context = null;
+        public BookRepository(BookStoreContext context)
         {
-            return DataSource();
+            _context = context;
         }
-        public BookModel GetBookById (int id)
+        public async Task<int>AddNewBook(BookModel model)
         {
-#pragma warning disable CS8603 // Possible null reference return.
-            return DataSource().FirstOrDefault(x => x.Id == id);
-#pragma warning restore CS8603 // Possible null reference return.
+            var newbook = new Book();
+            {
+             
+                
+                    newbook.Title = model.Title;
+                    newbook.Description = model.Description;
+                newbook.Author = model.Author;
+                newbook.Category = model.Category;  
+               newbook.Language = model.Language;   
+                newbook.TotalPages= model.TotalPages;   
+
+            };
+           await _context.Books.AddAsync(newbook);
+            await _context.SaveChangesAsync(); 
+            return newbook.Id;  
+        }
+        public  async Task<List<BookModel>> GetAllBooks()
+        {
+            var books=new List<BookModel>();    
+            var allbooks = await _context.Books.ToListAsync();
+            if(allbooks?.Any()==true)
+            {
+                foreach(var book in allbooks)
+                {
+                    books.Add(new BookModel()
+                    {
+                        Author = book.Author,   
+                        Title = book.Title, 
+                        Description = book.Description,
+                        Category = book.Category,   
+                        Id = book.Id,  
+                        Language = book.Language,   
+                        TotalPages = book.TotalPages,   
+
+                    });
+                       
+                }
+            }
+            return books;
+        }
+        public async Task<BookModel?> GetBookById (int id)
+        {
+            var book =await _context.Books.FindAsync(id);
+            if(book != null)
+            {
+                var bookDetails = new BookModel()
+                {
+
+                    Author = book.Author,
+                    Title = book.Title,
+                    Description = book.Description,
+                    Category = book.Category,
+                    Id = book.Id,
+                    Language = book.Language,
+                    TotalPages = book.TotalPages,
+                };
+                return bookDetails;
+            }
+            return null;
         }
         public List<BookModel> SearchBook(string title,string author) { 
             return DataSource().Where(x =>x.Title.Contains(title)||x.Author.Contains(author)).ToList();   
