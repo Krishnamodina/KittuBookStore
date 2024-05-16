@@ -10,9 +10,11 @@ namespace KittuBookStore
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
             //creating ConnectionString
             builder.Services.AddDbContext<BookStoreContext>(
                options => options.UseSqlServer("user id = sa; pwd =123; data source = DELL\\SQLEXPRESS; database = BookStore; "));
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 #if DEBUG   
@@ -20,6 +22,7 @@ namespace KittuBookStore
             builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 #endif
             builder.Services.AddScoped<BookRepository, BookRepository>();
+           // builder.Services.AddScoped<LanguagueRepository, LanguagueRepository>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

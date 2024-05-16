@@ -7,9 +7,9 @@
 <div class="container">
     <h3 class="display-4">Add New Book</h3>
     <hr />
-    @if(ViewBag.isSuccess)
+    @if(ViewBag.isSuccess==true)
     {
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
+           <div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>Congratulations</strong>New Book is Added Successfully.<br />
             Click<a asp-controller="BookController1" asp-action="GetBook" asp-route-id="@ViewBag.BookId">here</a>
             to View More Details
@@ -21,49 +21,87 @@
 
    
 
-    <form method="post">
+    <form method="post" asp-action="AddBook" asp-controller="BookController1" enctype="multipart/form-data">
+    
         <div class="form-group">
             <label asp-for="Title">
 
             </label>
             <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+
         </div>
         <div class="form-group">
             <label asp-for="Author">
 
             </label>
             <input asp-for="Author" class="form-control" />
+            <span asp-validation-for="Author" class="text-danger"></span>
         </div>
-        
+      
         <div class="form-group">
-            <label asp-for="Language">
-
-            </label>
-            <input asp-for="Language" class="form-control" />
+            <label asp-for="Language" class="control-label"></label>
+            <select asp-for="Language" class="form-control">
+                <option value="">Select a Language</option>
+                <option>English</option>
+                <option>Telugu</option>
+                <option>Hindi</option>
+            </select>
+            <span asp-validation-for="Language" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label asp-for="Category">
 
             </label>
             <input asp-for="Category" class="form-control" />
+            <span asp-validation-for="Category" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label asp-for="Description">
 
             </label>
             <textarea asp-for="Description" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label asp-for="TotalPages">
 
             </label>
             <input asp-for="TotalPages" class="form-control" />
+            <span asp-validation-for="TotalPages" class="text-danger"></span>
         </div>
+      
+        <div class="form-group">
+            
+            <div class="mb-2">
+                <label for="formFile" class="form-label">Choose Cover Photo for Your Book</label>
+                <input class="form-control" asp-for="CoverPhoto" id="formFile">
+            </div>
+            <span asp-validation-for="CoverPhoto" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+
+            <div class="mb-2">
+                <label for="formFile" class="form-label">Choose the gallery images i=of your book</label>
+                <input class="form-control" asp-for="GalleryFiles" id="formFile">
+            </div>
+            <span asp-validation-for="GalleryFiles" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+
+            <div class="mb-2">
+                <label for="formFile" class="form-label">Upload Your Book in Pdf Format</label>
+                <input class="form-control" asp-for="BookPdf" id="formFile">
+            </div>
+            <span asp-validation-for="BookPdf" class="text-danger"></span>
+        </div>
+
+
         <div class="form-group">
             <input type="submit" value="Add Book" class="btn btn-primary" />
         </div>
     </form>
-
     <div>
        <br />
        <br />

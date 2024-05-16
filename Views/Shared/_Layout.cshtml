@@ -7,58 +7,22 @@
     <link href="~/lib/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" href="/">
-                    <img src="~/images/KITTU’S.png" width="40" height="40" />
-                    Book Store
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav">
-                        <li class=  "nav-item">
-                            <a class="btn btn-outline-primary">Login</a>
-                            <a class="btn btn-primary">Register</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Home" asp-action="AboutUs">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Contact">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="BookController1" asp-action="GetAllBooks">All Books</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="BookController1" asp-action="Addbook">Add Book</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <partial name="_header" />
 
     <main role="main">
         @RenderBody()
     </main>
 
-    <footer class="bg-body-tertiary text-center">
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-            Copyright &copy; @DateTime.Now.Year
-            <a class="text-body" href="#">KittuBookStore</a>
-        </div>
-    </footer>
+   <partial name="_footer" />
 
-    <!-- jQuery and Bootstrap Bundle -->
+    <!-- jQuery Bundle -->
     <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/jquery-validate/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+
+    <!--Bootstrap Bundle -->
+
     <script src="~/lib/twitter-bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

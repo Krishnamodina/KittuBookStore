@@ -8,7 +8,10 @@ namespace KittuBookStore.Data
             : base(options) { 
         }
         public DbSet<Book> Books { get; set; }
+        public DbSet<BookGallery> BookGallery{ get; set; }
 
-       
+
+
+
     }
 }
