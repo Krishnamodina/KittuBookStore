@@ -1,0 +1,67 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = KittuBookStore
+build_property.RootNamespace = KittuBookStore
+build_property.ProjectDir = D:\KittuBookStore\KittuBookStore\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = D:\KittuBookStore\KittuBookStore
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/KittuBookStore/KittuBookStore/Views/BookController1/AddBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0NvbnRyb2xsZXIxXEFkZEJvb2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KittuBookStore/KittuBookStore/Views/BookController1/GetAllBooks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0NvbnRyb2xsZXIxXEdldEFsbEJvb2tzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KittuBookStore/KittuBookStore/Views/BookController1/GetBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va0NvbnRyb2xsZXIxXEdldEJvb2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KittuBookStore/KittuBookStore/Views/Home/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KittuBookStore/KittuBookStore/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KittuBookStore/KittuBookStore/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KittuBookStore/KittuBookStore/Views/Shared/_bookThumbnail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9ib29rVGh1bWJuYWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KittuBookStore/KittuBookStore/Views/Shared/_footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9mb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KittuBookStore/KittuBookStore/Views/Shared/_header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9oZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KittuBookStore/KittuBookStore/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KittuBookStore/KittuBookStore/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/KittuBookStore/KittuBookStore/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
